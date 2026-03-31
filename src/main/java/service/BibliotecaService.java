@@ -30,4 +30,9 @@ public class BibliotecaService {
 
         caros.forEach(System.out::println);
     }
+
+    public void listarPorAutor(String autor) {
+        autores.getOrDefault(autor, new ArrayList<>())
+                .forEach(System.out::println);
+    }
 }
