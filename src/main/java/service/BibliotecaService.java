@@ -27,5 +27,7 @@ public class BibliotecaService {
         List<Livro> caros = livros.stream()
                 .filter(l -> l.preco() > valor)
                 .collect(Collectors.toList());
+
+        caros.forEach(System.out::println);
     }
 }
