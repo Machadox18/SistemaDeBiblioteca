@@ -17,4 +17,8 @@ public class BibliotecaService {
 
         autores.computeIfAbsent(livro.autor(), a -> new ArrayList<>()).add(livro);
     }
+
+    public void listarLivros() {
+        livros.forEach(System.out::println);
+    }
 }
