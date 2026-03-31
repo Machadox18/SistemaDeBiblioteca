@@ -26,5 +26,8 @@ public class Main {
 
         Caixa<Livro> caixa = new Caixa<>();
         caixa.guardar(l1);
+
+        System.out.println("\nLivro guardado:");
+        System.out.println(caixa.abrir());
     }
 }
