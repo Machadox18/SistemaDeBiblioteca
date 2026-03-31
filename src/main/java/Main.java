@@ -13,5 +13,14 @@ public class Main {
         service.adicionarLivro(l1);
         service.adicionarLivro(l2);
         service.adicionarLivro(l3);
+
+        System.out.println("Todos os livros:");
+        service.listarLivros();
+
+        System.out.println("\nLivros acima de 100:");
+        service.listarLivrosCaros(100);
+
+        System.out.println("\nLivros de Robert Martin:");
+        service.listarPorAutor("Robert Martin");
     }
 }
