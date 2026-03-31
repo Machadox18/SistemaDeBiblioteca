@@ -1,4 +1,5 @@
 import model.Livro;
+import repository.Caixa;
 import service.BibliotecaService;
 
 public class Main {
@@ -22,5 +23,8 @@ public class Main {
 
         System.out.println("\nLivros de Robert Martin:");
         service.listarPorAutor("Robert Martin");
+
+        Caixa<Livro> caixa = new Caixa<>();
+        caixa.guardar(l1);
     }
 }
