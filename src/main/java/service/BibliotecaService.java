@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class BibliotecaService {
 
@@ -20,5 +21,11 @@ public class BibliotecaService {
 
     public void listarLivros() {
         livros.forEach(System.out::println);
+    }
+
+    public void listarLivrosCaros(double valor) {
+        List<Livro> caros = livros.stream()
+                .filter(l -> l.preco() > valor)
+                .collect(Collectors.toList());
     }
 }
